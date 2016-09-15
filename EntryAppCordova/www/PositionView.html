@@ -1,0 +1,88 @@
+﻿
+    <div data-role="page">
+        <!--positionView script-->
+        <script src="scripts/positionview.js"></script>
+        <script src="scripts/panelOptions.js"></script>
+
+        <div data-role="header" data-position="fixed">
+            <h1>Location Details</h1>
+          <!--<a class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-notext ui-btn-inline" style="left:88%;" id="btnshareImage">Button</a>-->
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a class="ui-shadow ui-btn ui-corner-all ui-icon-myshareicon ui-btn-icon-notext ui-btn-inline" style="left:88%;" id="btnshareImage">Button</a>
+       
+        </div>
+
+        <div role="main" class="ui-content">
+           
+            
+            <a class="ui-btn ui-shadow ui-corner-all ui-icon-navigation ui-btn-icon-left" href="#" id="btntakemehere">Take me here!</a>
+
+            <a class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-left" href="CloseLocationsView.html" id="btncloseLocation">Find places near this location</a>
+           
+            <p>
+                <label for="fsavepos">Position Description:</label>
+                <input name="fsavpos" id="inSavedPos" type="text" value="">
+
+                <label for="fsavepos">Position Coordinates:</label>
+                <input name="fsavpos" id="inSavedCoords" type="text" value="">
+
+            </p>
+
+            <p>
+               Address of Coordinates: <div id="dvAddress" style="font-weight:bold;"></div>
+            </p>
+
+            <p>
+                <button id="btnEditSave" class="ui-btn ui-shadow ui-corner-all ui-icon-edit ui-btn-icon-left">Save</button>
+            </p>
+
+
+                <p>
+                    <button id="btnDelLoc" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left">Delete</button>
+                </p>
+
+  
+
+
+                <p id="prefPositions"></p>
+                <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all hidden" data-rel="dialog" data-transition="pop" id="popit">Show page "popup" (as a dialog)</a></p>
+
+        </div>
+
+        <div data-role="footer">
+       
+        </div><!-- /footer -->
+        <div role="main" class="ui-content">
+            <button class="ui-btn ui-shadow ui-corner-all ui-icon-video ui-btn-icon-left" id="btnTakePicture">Take picture for location</button>
+
+            <div id="dvlocationPictures"></div>
+
+        </div>
+
+        <!--panels-->
+        <div data-role="panel" data-position="left" data-display="push" data-theme="b" id="nav-panel">
+
+            <ul data-role="listview">
+                <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+
+            </ul>
+            <div id="panelInfo">
+                <br /><br />
+                <ul data-role="listview" data-theme="">
+                    <li dataicon=""><a href="" class="btnProfile">Your Profile</a></li>
+                    <li data-icon=""><a href="#" class="btnWeatherCheck">Weather for location</a></li>
+                    <li data-icon=""><a href="#" class="btnAbout">Info</a></li>
+                </ul>
+
+                <br />
+
+                <div class="pContentOptions"></div>
+
+            </div>
+        </div>
+
+        <!--end panel-->
+
+
+ </div>
+

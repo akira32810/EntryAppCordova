@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div data-role="page">
+        <!--disFullImage script-->
+        <script src="scripts/disFullImage.js"></script>
+        <script src="scripts/panelOptions.js"></script>
+
+        <div data-role="header" data-position="fixed">
+            <h1>Full Image Display</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a class="ui-shadow ui-btn ui-corner-all ui-icon-myshareicon ui-btn-icon-notext ui-btn-inline" style="left:88%;" id="btnshareImageFull">Button</a>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <a class="ui-btn ui-shadow ui-corner-all ui-icon-edit ui-btn-icon-left" href="drawCanvasView.html" id="btndrawCanvas">Canvas Image</a>
+
+            <a class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left" href="#" id="btnDeleteImage">Delete Image</a>
+
+            <div id="dvimgContainer">
+            <img src="" id="imgFullImg" alt="Full Image" style="width:100%; height: 100%;" />
+            </div>
+            
+        </div>
+
+        <!--panels-->
+        <div data-role="panel" data-position="left" data-display="push" data-theme="b" id="nav-panel">
+
+            <ul data-role="listview">
+                <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+
+            </ul>
+            <div id="panelInfo">
+                <br /><br />
+                <ul data-role="listview" data-theme="">
+                    <li dataicon=""><a href="" class="btnProfile">Your Profile</a></li>
+                    <li data-icon=""><a href="#" class="btnWeatherCheck">Weather for location</a></li>
+                    <li data-icon=""><a href="#" class="btnAbout">Info</a></li>
+                </ul>
+
+                <br />
+
+                <div class="pContentOptions"></div>
+
+            </div>
+        </div>
+
+        <!--end panel-->
+ 
+    </div>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <!--<script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/positionview.js"></script>-->
+</body>
+</html>

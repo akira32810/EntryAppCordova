@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div data-role="page">
+        <!--positionView script-->
+        <script src="scripts/closelocations.js"></script>
+        <script src="scripts/panelOptions.js"></script>
+
+        <div data-role="header" data-position="fixed">
+            <h1>Places Near This Location</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+         
+
+        </div>
+
+        <div role="main" class="ui-content">
+
+
+            <p>
+                <label for="lblCC">Coordinates:</label>
+                 <div id="dvCurrentCoords"></div>
+            </p>
+
+
+            <p>
+                <label for="lblCurrAddress">Address:</label>
+                <div id="dvCurrentAddr" style="font-weight:bold;"></div>
+            </p>
+
+            <p>
+                <label for="NameSearch">Enter name to search</label>
+                <input name="NameSearch" id="inNameSearch" type="text" value="">
+
+            </p>
+
+            <p>
+              
+            </p>
+
+            <p>
+                <button id="btnSearchLocation" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-left">Search</button>
+            </p>
+
+
+            
+            <p class="pcMap">
+                <div id="dvkey" style="display:none;">
+                    <img src="images/csavedlocation.png" alt="Saved Location Icon" /> 
+                </div>
+                <div id="map_canvas" style="width:100%; height:300px"></div>
+            </p>
+
+            
+
+
+
+        </div>
+
+        <div data-role="footer">
+
+        </div>
+
+        <!--panels-->
+        <div data-role="panel" data-position="left" data-display="push" data-theme="b" id="nav-panel">
+
+            <ul data-role="listview">
+                <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+
+            </ul>
+            <div id="panelInfo">
+                <br /><br />
+                <ul data-role="listview" data-theme="">
+                    <li dataicon=""><a href="" class="btnProfile">Your Profile</a></li>
+                    <li data-icon=""><a href="#" class="btnWeatherCheck">Weather for location</a></li>
+                    <li data-icon=""><a href="#" class="btnAbout">Info</a></li>
+                </ul>
+
+                <br />
+
+                <div class="pContentOptions"></div>
+
+            </div>
+        </div>
+
+        <!--end panel-->
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+   
+    <title>Favorite Location</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!--<link rel="stylesheet" href="themes/FavLoc.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />--> 
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+  
+ 
+    <script type="text/javascript" src="scripts/jquery_core_2.1.4.js"></script>
+
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/ads.js"></script>
+    <script src="scripts/jquery.panzoom.js"></script>
+
+
+    <!--find close by locations script-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+
+
+
+
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+   
+
+
+    <!-- EntryAppCordova references -->
+ 
+</head>
+<body>
+
+    <div data-role="page">
+
+        <script type="text/javascript" src="scripts/panelOptions.js"></script>
+
+        <div data-role="header" data-position="fixed">
+            <h1>Favorite Location</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+           
+        </div>
+
+        <div role="main" class="ui-content">
+
+
+        
+            <p>You can save your location by pressing the button below.</p>
+            
+            <button id="get_saveLocation" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-left">Save Current Location</button>
+
+            <p id="prefPositions"></p>
+            <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all hidden" data-rel="dialog" data-transition="pop" id="popit">Show page "popup" (as a dialog)</a></p>
+        
+
+            
+            <p id="dvLocationDisplay">
+                <h2>Location Saved</h2>
+                <ul data-role="listview" id="ulViewAllPositions" data-inset="true" data-filter="true" data-autodividers="true">
+        
+                </ul>
+            </p>
+
+        </div>
+
+        <!--panels-->
+        <div data-role="panel" data-position="left" data-display="push" data-theme="b" id="nav-panel">
+     
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+
+                </ul>
+            <div id="panelInfo">
+                <br /><br/>
+                <ul data-role="listview" data-theme="">
+                    <li dataicon=""><a href="" class="btnProfile">Your Profile</a></li>
+                    <li data-icon=""><a href="#" class="btnWeatherCheck">Weather for location</a></li>
+                    <li data-icon=""><a href="#" class="btnAbout">Info</a></li>
+                </ul>
+
+                <br />
+
+                <div class="pContentOptions"></div>
+
+            </div>
+        </div>
+
+        <!--end panel-->
+
+        </div>
+
+
+
+
+    <!-- Start of third page: #popup -->
+    <div data-role="page" id="popup">
+
+        <div data-role="header" data-theme="b">
+            <h1>Dialog</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <div id="dvLocationInput">
+                <h2>Location</h2>
+                <p>
+                    <label for="text-basic">Position Description:</label>
+                    <input name="text-basic" id="inPosdesc" type="text" value="">
+                </p>
+          
+            </div>
+            <p class="mymessage"></p>
+            <p id="hLatLong" style="display:none"></p>
+
+            <p>
+                Address of Coordinates:
+                <div id="dvAddressShow" style="font-weight:bold;"></div>
+            </p>
+
+            <p class="psaveButton"><button class="ui-shadow ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-left" id="btnSavePos">Save</button></p>
+            <p><a href="" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to main</a></p>
+        </div><!-- /content -->
+           
+        <div data-role="footer">
+
+        </div><!-- /footer -->
+    </div><!-- /page popup -->
+
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div data-role="page">
+       
+        <script src="scripts/sketch.js"></script>
+        <script src="scripts/panelOptions.js"></script>
+
+                    <script type="text/javascript">
+                $(function () {
+                    $('#colors_demo .tools').append("<br/>");
+      $.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function () {        
+        $('#colors_demo .tools').append("<a href='#colors_sketch' class='ui-btn ui-btn-inline' data-color='" + this + "' style='background: " + this + ";'></a> ");
+        //$('#colors_demo .tools').append('<a href="#colors_sketch" class="ui-btn ui-btn-inline" style="background: '+this+' data-color='+this+';"></a>');
+      });
+      $('#colors_demo .tools').append("<br/>");
+    $.each([3, 5, 10, 15], function() {
+        $('#colors_demo .tools').append("<a href='#colors_sketch' class='ui-btn ui-btn-inline' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
+    });
+    $('#colors_sketch').sketch({ defaultColor: "#000" });
+  });
+            </script>
+
+
+
+        <div data-role="header" data-position="fixed">
+            <h1>Sketch Image</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a href="#colors_sketch" class="ui-shadow ui-btn ui-corner-all ui-icon-myshareicon ui-btn-icon-notext ui-btn-inline" data-download="png" style="left:88%;" id="btnshareSketchImage">Button</a>
+
+        </div>
+
+        <div role="main" class="ui-content">
+            <div id="colors_demo">
+                <div class="tools">
+                    <!--<a href="#colors_sketch" data-download="png" style="float: right; width: 100px;">Download</a>-->
+                    <a href="#colors_sketch" class="ui-btn ui-btn-inline" data-tool="marker">Marker</a>
+                    <a href="#colors_sketch" class="ui-btn ui-btn-inline" data-tool="eraser">Eraser</a><br/>
+
+         
+
+
+                    <button class="ui-btn ui-shadow ui-corner-all ui-icon-recycle ui-btn-icon-left" id="btnResetPos">Reset Image Positition</button>
+
+                </div>
+            </div>
+            <div id="dvcancontainer">
+            <canvas id="colors_sketch" width="1024" height="768" style="border:1px solid #000000; padding:20px;" ></canvas>
+            <canvas id="canvas2" width="1024" height="768" style="display:none"></canvas>
+            </div>
+            <!--<canvas id="colors_sketch" style="width:800px; height: 500px"></canvas>-->
+
+
+
+        </div>
+
+
+        <div data-role="footer" data-position="fixed">
+            <div id="dvCustomArrow">
+
+                <div id="dvScrollImg">
+                    <img src="images/Scroll_Custom_small.png" alt="scroll bar" />
+                </div>
+
+                <button class="ui-btn ui-icon-arrow-l ui-btn-inline ui-btn-icon-top ui-btn-icon-notext btnArrowcustom" style="position:relative; top: 45px;" id="btnmvimgLeft"></button>
+                <button class="ui-btn ui-icon-arrow-u ui-btn-inline ui-btn-icon-left ui-btn-icon-notext btnArrowcustom" id="btnmvimgUp" style="position:relative; right: 13px; top: 7px;"></button><br />
+
+
+                <button class="ui-btn ui-icon-arrow-r ui-btn-inline ui-btn-icon-left ui-btn-icon-notext btnArrowcustom" style="position: relative; bottom: 11px; left: 80px;" id="btnmvimgRight"></button> <br />
+                <button class="ui-btn ui-icon-arrow-d ui-btn-inline ui-btn-icon-left ui-btn-icon-notext btnArrowcustom" style="position: relative; margin-top: -20px; left: 40px;" id="btnmvimgDown"></button>
+            </div>
+        </div>
+
+
+
+        <!--panels-->
+        <div data-role="panel" data-position="left" data-display="push" data-theme="b" id="nav-panel">
+
+            <ul data-role="listview">
+                <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+
+            </ul>
+            <div id="panelInfo">
+                <br /><br />
+                <ul data-role="listview" data-theme="">
+                    <li dataicon=""><a href="" class="btnProfile">Your Profile</a></li>
+                    <li data-icon=""><a href="#" class="btnWeatherCheck">Weather for location</a></li>
+                    <li data-icon=""><a href="#" class="btnAbout">Info</a></li>
+                </ul>
+
+                <br />
+
+                <div class="pContentOptions"></div>
+
+            </div>
+        </div>
+
+        <!--end panel-->
+
+    </div>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <!--<script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/positionview.js"></script>-->
+</body>
+</html>
